@@ -1,0 +1,11 @@
+POST http://localhost:3000/projects
+content-type: application/json
+
+{
+    "name": "Lista de compras do Jose",
+    "description": "lista basica"
+}
+
+###
+
+GET http://localhost:3000/projects

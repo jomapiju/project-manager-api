@@ -3,5 +3,6 @@ import { ControllersModule } from './controllers/controllers.module';
 
 @Module({
     imports: [ControllersModule],
+    exports: [ControllersModule],
 })
 export class GatewaysModule {}

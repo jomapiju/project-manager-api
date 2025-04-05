@@ -1,0 +1,12 @@
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+    "name": "Comprar curso de nest para Jose",
+    "projectId": 1,
+    "status": "pending"
+}
+
+###
+
+GET http://localhost:3000/tasks
