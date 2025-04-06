@@ -2,6 +2,7 @@ import { Body, Controller, Get, NotFoundException, Param, Post, UnprocessableEnt
 import { CreateUserDto } from './dtos/create-user.dto';
 import { CreateUserService } from '../../../domain/use-cases/users/create-user.service';
 import { GetUserByIdService } from '../../../domain/use-cases/users/get-user-by-id.service';
+import { Public } from 'src/gateways/guards/auth-guard.service';
 
 @Controller('users')
 export class UsersController {
@@ -19,6 +20,7 @@ export class UsersController {
         }
     }
     @Post()
+    @Public()
     async create(@Body() createUserDto: CreateUserDto) {
         try {
             return await this.createUserUseCase.execute({ ...createUserDto });

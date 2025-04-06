@@ -3,8 +3,10 @@ import { ProjectsController } from './projects/projects.controller';
 import { TasksController } from './tasks/tasks.controller';
 import { UsersController } from './users/users.controller';
 import { UseCasesModule } from '../../domain/use-cases/use-cases.module';
+import { AuthModule } from 'src/infrastructure/auth/auth.module';
+import { AuthController } from './auth/auth.controller';
 @Module({
-    imports: [UseCasesModule],
-    controllers: [ProjectsController, TasksController, UsersController],
+    imports: [UseCasesModule, AuthModule],
+    controllers: [ProjectsController, TasksController, UsersController, AuthController],
 })
 export class ControllersModule {}
