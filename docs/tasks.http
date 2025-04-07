@@ -1,8 +1,11 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam1AZW1haWwuY29tLmJyIiwiaWF0IjoxNzQzOTg5MTAzLCJleHAiOjE3NDM5OTI3MDN9.zQ3KQlp2HWF7IzJMVvOgW_HLOmsy-h0Fi7AOgZrB_UY
+
 POST http://localhost:3000/tasks
 content-type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "name": "Comprar curso de nest para Jose",
+    "name": "Finalizar curso de nest - Jose",
     "projectId": 1,
     "status": "pending"
 }
@@ -10,3 +13,4 @@ content-type: application/json
 ###
 
 GET http://localhost:3000/tasks
+Authorization: Bearer {{token}}

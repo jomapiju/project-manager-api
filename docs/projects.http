@@ -1,6 +1,8 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam1AZW1haWwuY29tLmJyIiwiaWF0IjoxNzQzOTg2MzAxLCJleHAiOjE3NDM5ODk5MDF9.qgFlTL1vEbn_6vlArw-heYh7VvNp4y83WQ77iGyUmyc
+
 POST http://localhost:3000/projects
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam1AZW1haWwuY29tLmJyIiwiaWF0IjoxNzQzOTQyODc4LCJleHAiOjE3NDM5NDY0Nzh9.Nie3gi_-EBkxwtS7u4dZi1MxegDVMI3qIC_gORfQMCE
+Authorization: Bearer {{token}}
 
 {
     "name": "Lista de compras do Jose",
@@ -10,4 +12,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuY
 ###
 
 GET http://localhost:3000/projects
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam1AZW1haWwuY29tLmJyIiwiaWF0IjoxNzQzOTQyODc4LCJleHAiOjE3NDM5NDY0Nzh9.Nie3gi_-EBkxwtS7u4dZi1MxegDVMI3qIC_gORfQMCE
+Authorization: Bearer {{token}}
